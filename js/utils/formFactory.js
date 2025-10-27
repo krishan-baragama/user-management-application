@@ -45,15 +45,16 @@ export const formFactory = () => {
   genderInput.id = "userGender";
   genderInput.classList.add("form-control");
 
-  // Append everything
-  form.appendChild(nameLabel);
-  form.appendChild(nameInput);
-  form.appendChild(ageLabel);
-  form.appendChild(ageInput);
-  form.appendChild(imageLabel);
-  form.appendChild(imageInput);
-  form.appendChild(genderLabel);
-  form.appendChild(genderInput);
+  form.append(
+    nameLabel,
+    nameInput,
+    ageLabel,
+    ageInput,
+    imageLabel,
+    imageInput,
+    genderLabel,
+    genderInput
+  );
 
   return form;
 };
