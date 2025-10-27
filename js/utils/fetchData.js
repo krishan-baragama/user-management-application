@@ -5,7 +5,7 @@ export const fetchData = async (url) => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const data = await response.text(); // or .json() if the API returns JSON
+    const data = await response.json(); // parse JSON, not text
     return data;
   } catch (error) {
     console.error("Fetch failed:", error);
